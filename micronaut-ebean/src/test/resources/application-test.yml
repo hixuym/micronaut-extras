@@ -1,0 +1,7 @@
+datasources.default: {}
+
+ebean.default:
+    packagesToScan: io.micronaut.configuration.ebean
+    ddlGenerate: true
+    ddlRun: true
+
