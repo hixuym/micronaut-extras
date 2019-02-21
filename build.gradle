@@ -444,10 +444,21 @@ ext {
 subprojects { subproject ->
 
     version project.projectVersion
-    group project.projectGroupId
 
     ext {
+        userOrg = "Monkey"
+        isConfiguration = subproject.projectDir.parentFile.name == 'configurations'
         isBuildSnapshot = version.toString().endsWith("-SNAPSHOT")
+    }
+
+    if (subproject.name == "configurations") {
+        return
+    }
+
+    if (isConfiguration) {
+        group "io.micronaut.configuration"
+    } else {
+        group projectGroupId
     }
 
     repositories {

@@ -9,7 +9,7 @@
 
 rootProject.name = 'micronaut-extras'
 
-include 'micronaut-ebean'
-include 'micronaut-mybatis'
+include 'configurations:micronaut-ebean'
+include 'configurations:micronaut-mybatis'
 include 'micronaut-util'
 
